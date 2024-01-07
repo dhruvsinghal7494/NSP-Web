@@ -3,18 +3,32 @@
 import { authenticate } from "@/app/lib/actions";
 import styles from "./loginForm.module.css";
 import { useFormState } from "react-dom";
+import Image from "next/image";
 
 const LoginForm = () => {
   const [state, formAction] = useFormState(authenticate, undefined);
 
   return (
-    <form action={formAction} className={styles.form}>
-      <h1>Login</h1>
-      <input type="text" placeholder="username" name="username" />
-      <input type="password" placeholder="password" name="password" />
-      <button>Login</button>
-      {state && state}
-    </form>
+    <div className={styles.page}>
+      <Image
+        src="/Guruji.webp"
+        alt="Mahabrahmrishi"
+        className={styles.logo}
+        width={400}
+        height={400}
+      ></Image>
+      <div className="">
+        <form action={formAction} className={styles.form}>
+          <h1>Login</h1>
+          <p>Username</p>
+          <input type="text" placeholder="username" name="username" />
+          <p>Password</p>
+          <input type="password" placeholder="password" name="password" />
+          <button>Submit</button>
+          {state && state}
+        </form>
+      </div>
+    </div>
   );
 };
 
