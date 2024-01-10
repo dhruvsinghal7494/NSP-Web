@@ -8,9 +8,10 @@ import {
   MdAttachMoney,
   MdWork,
   MdAnalytics,
-  MdPeople,
+  MdOutlineAttachMoney,
   MdOutlineSettings,
   MdHelpCenter,
+  MdPeople,
   MdLogout,
 } from "react-icons/md";
 import { auth, signOut } from "@/app/auth";
@@ -45,19 +46,24 @@ const menuItems = [
     title: "Analytics",
     list: [
       {
-        title: "Revenue",
-        path: "/dashboard/revenue",
+        title: "Arihanta",
+        path: "/dashboard/arihanta",
         icon: <MdWork />,
       },
       {
-        title: "Reports",
-        path: "/dashboard/reports",
+        title: "Donation",
+        path: "/dashboard/donation",
         icon: <MdAnalytics />,
       },
       {
-        title: "Teams",
-        path: "/dashboard/teams",
+        title: "Namaskar",
+        path: "/dashboard/namaskar",
         icon: <MdPeople />,
+      },
+      {
+        title: "Vishesh Kripa",
+        path: "/dashboard/visheshkripa",
+        icon: <MdOutlineAttachMoney />,
       },
     ],
   },
