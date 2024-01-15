@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "@/app/ui/dashboard/donation/donation.module.css";
+import styles from "@/app/ui/dashboard/namaskar/namaskar.module.css";
 import Search from "@/app/ui/dashboard/search/search";
 import Pagination from "@/app/ui/dashboard/pagination/pagination";
 import { fetchProducts } from "@/app/lib/data";
 import { deleteProduct } from "@/app/lib/actions";
 
-const Donation = async ({ searchParams }) => {
+const Namaskar = async ({ searchParams }) => {
   const q = searchParams?.q || "";
   const page = searchParams?.page || 1;
   const { count, products } = await fetchProducts(q, page);
@@ -15,7 +15,7 @@ const Donation = async ({ searchParams }) => {
     <div className={styles.container}>
       <div className={styles.top}>
         <Search placeholder="Latest Transactions..." />
-        <Link href="/dashboard/donation/add">
+        <Link href="/dashboard/namaskar/add">
           <button className={styles.addButton}>Add New</button>
         </Link>
       </div>
@@ -23,10 +23,9 @@ const Donation = async ({ searchParams }) => {
         <thead>
           <tr>
             <td>Dham</td>
-            <td>Donor Name</td>
+            <td>Created At</td>
             <td>Description</td>
             <td>Amount</td>
-            <td>Date</td>
             <td>Type</td>
           </tr>
         </thead>
@@ -73,4 +72,4 @@ const Donation = async ({ searchParams }) => {
   );
 };
 
-export default Donation;
+export default Namaskar;

@@ -26,7 +26,7 @@ const Donation = async ({ searchParams }) => {
             <td>Donor Name</td>
             <td>Description</td>
             <td>Amount</td>
-            <td>Date</td>
+            <td>Created At</td>
             <td>Type</td>
           </tr>
         </thead>

@@ -1,5 +1,5 @@
-import LoginForm from "./ui/login/loginForm/loginForm";
-import styles from "@/app/ui/login/login.module.css";
+import LoginForm from "./login/loginForm/loginForm";
+import styles from "@/app/login/login.module.css";
 
 // TODO
 const Homepage = () => {

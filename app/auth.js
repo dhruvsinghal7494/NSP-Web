@@ -20,10 +20,10 @@ const login = async (credentials) => {
 
     if (!isPasswordCorrect) throw new Error("Wrong credentials!");
 
-    console.log(user);
+    // console.log(user);
     return user;
   } catch (err) {
-    console.log(err);
+    // console.log(err);
     throw new Error("Failed to login!");
   }
 };
@@ -44,10 +44,18 @@ export const { signIn, signOut, auth } = NextAuth({
   ],
   // ADD ADDITIONAL INFORMATION TO SESSION
   callbacks: {
+    async signIn(user) {
+      if (user.isAdmin) {
+        return "/admin/dashboard"; // Redirect to the admin panel
+      } else {
+        return "/center/dashboard"; // Redirect to the user panel
+      }
+    },
     async jwt({ token, user }) {
       if (user) {
         token.username = user.username;
         token.img = user.img;
+        token.isAdmin = user.isAdmin; // Include isAdmin in the token
       }
       return token;
     },
@@ -55,6 +63,7 @@ export const { signIn, signOut, auth } = NextAuth({
       if (token) {
         session.user.username = token.username;
         session.user.img = token.img;
+        session.user.isAdmin = token.isAdmin; // Include isAdmin in the session
       }
       return session;
     },
