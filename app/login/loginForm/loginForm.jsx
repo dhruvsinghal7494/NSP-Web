@@ -10,13 +10,13 @@ const LoginForm = () => {
 
   return (
     <div className={styles.page}>
-      <Image
+      {/* <Image
         src="/Guruji.webp"
         alt="Mahabrahmrishi"
         className={styles.logo}
         width={400}
         height={400}
-      ></Image>
+      ></Image> */}
       <div className="">
         <form action={formAction} className={styles.form}>
           <h1>Login</h1>
