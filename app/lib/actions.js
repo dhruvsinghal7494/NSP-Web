@@ -28,7 +28,6 @@ export const addUser = async (formData) => {
     });
 
     await newUser.save();
-    console.log(newUser);
   } catch (err) {
     console.log(err);
     throw new Error("Failed to create user!");
@@ -159,13 +158,13 @@ export const authenticate = async (prevState, formData) => {
   const { username, password } = Object.fromEntries(formData);
 
   try {
-    await signIn("credentials", { username, password });
+    await signIn("credentials", { username, password, redirect: false });
   } catch (err) {
-    if (err.message.includes("CredentialsSignin")) {
-      console.error("Error during credential signin:", err);
-      return "Wrong Credentials";
-    }
-    console.error("Unhandled authentication error:", err);
-    throw err;
+    // if (err.message.includes("CredentialsSignin")) {
+    //   return "Wrong Credentials";
+    // throw err;
+    // }
+    return "Wrong Credentials";
   }
+  redirect("/dashboard");
 };
