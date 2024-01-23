@@ -14,37 +14,37 @@ import {
 const data = [
   {
     name: "Ladwa",
-    visit: 4000,
-    click: 2400,
+    Namaskar: 4000,
+    Revenue: 2400,
   },
   {
     name: "Kurukshetra",
-    visit: 3000,
-    click: 1398,
+    Namaskar: 3000,
+    Revenue: 1398,
   },
   {
     name: "Delhi",
-    visit: 2000,
-    click: 3800,
+    Namaskar: 2000,
+    Revenue: 3800,
   },
   {
     name: "Chandigarh",
-    visit: 2780,
-    click: 3908,
+    Namaskar: 2780,
+    Revenue: 3908,
   },
   {
     name: "Ambala",
-    visit: 1890,
-    click: 4800,
+    Namaskar: 1890,
+    Revenue: 4800,
   },
   // {
   //   name: "Fri",
-  //   visit: 2390,
+  //   Namaskar: 2390,
   //   click: 3800,
   // },
   // {
   //   name: "Sat",
-  //   visit: 3490,
+  //   Namaskar: 3490,
   //   click: 4300,
   // },
 ];
@@ -71,13 +71,13 @@ const Chart = () => {
           <Legend />
           <Line
             type="monotone"
-            dataKey="visit"
+            dataKey="Namaskar"
             stroke="#8884d8"
             strokeDasharray="5 5"
           />
           <Line
             type="monotone"
-            dataKey="click"
+            dataKey="Revenue"
             stroke="#82ca9d"
             strokeDasharray="3 4 5 2"
           />

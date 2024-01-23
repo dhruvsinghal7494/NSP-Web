@@ -11,6 +11,7 @@ const Transactions = () => {
             <td>Name</td>
             <td>Status</td>
             <td>Date</td>
+            <td>Type</td>
             <td>Amount</td>
           </tr>
         </thead>
@@ -25,7 +26,7 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Ladwa
               </div>
             </td>
             <td>
@@ -34,7 +35,8 @@ const Transactions = () => {
               </span>
             </td>
             <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>Namaskar</td>
+            <td>300</td>
           </tr>
           <tr>
             <td>
@@ -46,14 +48,15 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Kurukshetra
               </div>
             </td>
             <td>
               <span className={`${styles.status} ${styles.done}`}>Done</span>
             </td>
             <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>Namaskar</td>
+            <td>500</td>
           </tr>
           <tr>
             <td>
@@ -65,7 +68,7 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Ambala
               </div>
             </td>
             <td>
@@ -74,7 +77,8 @@ const Transactions = () => {
               </span>
             </td>
             <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>Expense</td>
+            <td>3200</td>
           </tr>
           <tr>
             <td>
@@ -86,7 +90,7 @@ const Transactions = () => {
                   height={40}
                   className={styles.userImage}
                 />
-                John Doe
+                Chandigarh
               </div>
             </td>
             <td>
@@ -95,7 +99,8 @@ const Transactions = () => {
               </span>
             </td>
             <td>14.02.2024</td>
-            <td>$3.200</td>
+            <td>Donation</td>
+            <td>500</td>
           </tr>
         </tbody>
       </table>
