@@ -26,6 +26,31 @@ const menuItems = [
         icon: <MdDashboard />,
       },
       {
+        title: "Arihanta",
+        path: "/dashboard/arihanta",
+        icon: <MdWork />,
+      },
+      {
+        title: "NSP",
+        path: "/dashboard/NSP",
+        icon: <MdAnalytics />,
+      },
+      {
+        title: "BSLND",
+        path: "/dashboard/bslnd",
+        icon: <MdPeople />,
+      },
+      {
+        title: "Vishesh Kripa",
+        path: "/dashboard/visheshkripa",
+        icon: <MdOutlineAttachMoney />,
+      },
+    ],
+  },
+  {
+    title: "Analytics",
+    list: [
+      {
         title: "Users",
         path: "/dashboard/users",
         icon: <MdSupervisedUserCircle />,
@@ -39,31 +64,6 @@ const menuItems = [
         title: "Transactions",
         path: "/dashboard/transactions",
         icon: <MdAttachMoney />,
-      },
-    ],
-  },
-  {
-    title: "Analytics",
-    list: [
-      {
-        title: "Arihanta",
-        path: "/dashboard/arihanta",
-        icon: <MdWork />,
-      },
-      {
-        title: "Donation",
-        path: "/dashboard/donation",
-        icon: <MdAnalytics />,
-      },
-      {
-        title: "Namaskar",
-        path: "/dashboard/namaskar",
-        icon: <MdPeople />,
-      },
-      {
-        title: "Vishesh Kripa",
-        path: "/dashboard/visheshkripa",
-        icon: <MdOutlineAttachMoney />,
       },
     ],
   },

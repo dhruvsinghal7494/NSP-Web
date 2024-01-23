@@ -12,6 +12,7 @@
 .content {
   flex: 4;
   padding: 20px;
+  width:max-content;
 }
 
 .wrapper {
@@ -21,9 +22,10 @@
 }
 
 .main {
-  flex: 3;
+  /* flex: 3; */
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
 }
 
