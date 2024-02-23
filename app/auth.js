@@ -48,13 +48,13 @@ export const { signIn, signOut, auth } = NextAuth({
   ],
   // ADD ADDITIONAL INFORMATION TO SESSION
   callbacks: {
-    // async signIn(user) {
-    //   if (user.isAdmin) {
-    //     return "/admin/dashboard"; // Redirect to the admin panel
-    //   } else {
-    //     return "/center/dashboard"; // Redirect to the user panel
-    //   }
-    // },
+    async signIn(user) {
+      if (user) {
+        return "/dashboard"; // Redirect to the admin panel
+      } else {
+        return "Invalid credentials"; // Redirect to the user panel
+      }
+    },
     async jwt({ token, user }) {
       if (user) {
         token.username = user.username;
