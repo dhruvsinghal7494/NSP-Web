@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { Product, User } from "./models";
 import { connectToDB } from "./utils";
 import { redirect } from "next/navigation";
+import { NextResponse } from "next/server";
 // import bcrypt from "bcrypt";
 import { signIn } from "../auth";
 
@@ -126,6 +127,19 @@ export const updateProduct = async (formData) => {
   redirect("/dashboard/products");
 };
 
+export const fetchUser = async (id) => {
+  try {
+    connectToDB();
+    const user = await User.findById(id);
+    return user;
+  } catch (error) {
+    return NextResponse.json(
+      { message: "Failed to register user" },
+      { status: 500 }
+    );
+  }
+};
+
 export const deleteUser = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
@@ -158,9 +172,10 @@ export const authenticate = async (prevState, formData) => {
   const { username, password } = Object.fromEntries(formData);
 
   try {
-    await signIn("credentials", { username, password });
+    await signIn("credentials", { username, password, redirect: false });
   } catch (err) {
     console.log(err);
     return "Wrong Credentials";
   }
+  redirect("/dashboard");
 };
